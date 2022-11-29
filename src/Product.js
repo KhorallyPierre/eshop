@@ -2,22 +2,27 @@ import React from "react";
 import "./Product.css";
 import StarIcon from '@mui/icons-material/Star';
 
-function Product() {
+function Product({id, title, image, price, rating}) {
     return (
     <div>
         <div className="product">
             <div className="product__info">
-                <p> Schuyler Medium Dome Satchel</p>
+                <p> {title}</p>
                 <p className="product__price">
                     <small> $</small>
-                    <strong> 109</strong>
+                    <strong> {price}</strong>
                 </p>
                 <div className="product__rating">
-                    <StarIcon/>
-                    <StarIcon/>
+                    {Array(rating)
+                    // fills specified elements in an array with a value. Overwrites the original array
+                    .fill()
+                    // underscore means each and every item in the array
+                    .map((_, i) => (
+                        <p> <StarIcon/> </p>
+                    ))}
+                    
                 </div>
-                <img src="https://images.katespade.com/is/image/KateSpade/K8701_300?$desktopProductZoom$"
-                alt="product-image" />
+                <img src={image} />
                 <button> Add to Basket </button>
             </div>
         </div>

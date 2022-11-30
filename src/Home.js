@@ -7,7 +7,7 @@ function Home() {
         <div> 
             <div className="home">
                 <div className="home__container">
-                <img src="https://images.unsplash.com/photo-1607082352121-fa243f3dde32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80" alt="" className="home__image" />
+                <img src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2020/09/hostinger-ecommerce.png" alt="" className="home__image" />
                <div className="home__row">
                 
                     <Product

@@ -7,11 +7,13 @@ import SearchIcon from '@mui/icons-material/Search';
 function Header() {
     return (
         <div className="header">
+          <href to="/">
             <div className="header__logo">
                 <StoreIcon className="header__logoImage" fontSize="large"/>
                 <h2 className="header__logoTitle">Free99</h2>
             </div>
-            
+          </href>
+          
 
       <div className="header__search">
         <input type="text" className="header__searchInput" />
@@ -27,10 +29,12 @@ function Header() {
           <span className="nav__itemLineOne">Your</span>
           <span className="nav__itemLineTwo">Shop</span>
         </div>
-          <div className="nav__itemBasket">
+        <href to="/Checkout">
+           <div className="nav_itemBasket">
             <ShoppingBasketIcon/>
-            <span className="nav__itemLineTwo nav__basketCount">0</span>
-          </div>
+            <span className="nav_itemLineTwo nav_basketCount"> 0 </span>
+           </div>
+        </href>
       </div>
         </div>
     )

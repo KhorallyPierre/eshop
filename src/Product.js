@@ -18,11 +18,11 @@ function Product({id, title, image, price, rating}) {
                     .fill()
                     // underscore means each and every item in the array
                     .map((_, i) => (
-                        <p> <StarIcon/> </p>
+                        <p key={i}> <StarIcon/> </p>
                     ))}
                     
                 </div>
-                <img src={image} />
+                <img src={image} alt="" />
                 <button> Add to Basket </button>
             </div>
         </div>

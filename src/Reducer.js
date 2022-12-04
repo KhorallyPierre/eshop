@@ -7,6 +7,11 @@ export const initialState = {
 }
 
 //Selector
+
+export const getBasketTotal  = (basket) => {
+    // this line of code uses the reduce array method to increment 'item', which then becomes the total amount
+    return(basket?.reduce((amount,item) => item.price + amount, 0));
+}
 // state has current state of layers, action makes changes to that state 
 const reducer = (state, action) => {
     switch(action.type){

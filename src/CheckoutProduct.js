@@ -2,21 +2,25 @@ import React from 'react';
 import "./CheckoutProduct.css"
 import StarIcon from '@mui/icons-material/Star';
 
-function CheckoutProduct() {
+function CheckoutProduct({id, image, title, price, rating}) {
     return (
         <div className="CheckoutProduct">
-            <img src="https://images.katespade.com/is/image/KateSpade/K8701_300?$desktopProductZoom$" alt="" className="checkoutProduct__image" />
+            <img src={image} alt="" className="checkoutProduct__image" />
             <div className="product__infro">
                 <p className="checkoutProduct__title">
-                Schuyler Medium Dome Satchel" 
+                {title}
 
                 </p>
                 <p className="checkoutProduct__price">
                     <small> $</small>
-                    <strong> 2400</strong>
+                    <strong> {price}</strong>
                 </p>
                 <div className="checkoutProduct__rating">
-                        <p> <StarIcon/> </p>
+                        {Array({rating})
+                             .fill()
+                             .map((_, i) => (
+                            <p> <StarIcon/> </p>
+                        ))}
                 </div>
                 <button> Remove from Basket</button>
             </div>
